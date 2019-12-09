@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.mbtn_login = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // mbtn_login
             // 
-            this.metroButton1.Location = new System.Drawing.Point(576, 354);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(147, 51);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "metroButton1";
-            this.metroButton1.UseSelectable = true;
+            this.mbtn_login.Location = new System.Drawing.Point(576, 354);
+            this.mbtn_login.Name = "mbtn_login";
+            this.mbtn_login.Size = new System.Drawing.Size(147, 51);
+            this.mbtn_login.TabIndex = 0;
+            this.mbtn_login.Text = "로그인";
+            this.mbtn_login.UseSelectable = true;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.mbtn_login);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton mbtn_login;
     }
 }
