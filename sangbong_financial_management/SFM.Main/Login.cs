@@ -16,6 +16,8 @@ namespace sangbong_financial_management.SFM.Main
         public Login()
         {
             InitializeComponent();
+
+
         }
     }
 }

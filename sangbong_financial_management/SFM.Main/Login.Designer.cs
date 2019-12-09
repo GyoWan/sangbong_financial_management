@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.SuspendLayout();
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(576, 354);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(147, 51);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroButton1);
+            this.Name = "Login";
             this.Text = "Login";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
