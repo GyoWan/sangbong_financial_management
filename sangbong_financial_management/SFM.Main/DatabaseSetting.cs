@@ -11,23 +11,11 @@ using MetroFramework.Forms;
 
 namespace sangbong_financial_management.SFM.Main
 {
-    public partial class mf_login : MetroForm
+    public partial class DatabaseSetting : MetroForm
     {
-        public mf_login()
+        public DatabaseSetting()
         {
             InitializeComponent();
-
-
-        }
-
-        private void Mtbn_exit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void Mbtn_login_set_db_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
