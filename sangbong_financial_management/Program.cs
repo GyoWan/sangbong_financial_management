@@ -18,7 +18,7 @@ namespace sangbong_financial_management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mf_login());
+            Application.Run(new Login());
 
            
         }

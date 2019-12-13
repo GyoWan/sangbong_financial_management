@@ -1,6 +1,6 @@
 ﻿namespace sangbong_financial_management.SFM.Main
 {
-    partial class mf_login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -36,8 +36,8 @@
             this.mtbn_exit = new MetroFramework.Controls.MetroButton();
             this.mp_login_right = new MetroFramework.Controls.MetroPanel();
             this.mp__login_right_img = new MetroFramework.Controls.MetroPanel();
-            this.mp_login_left_img = new MetroFramework.Controls.MetroPanel();
             this.mbtn_login_set_db = new MetroFramework.Controls.MetroButton();
+            this.mp_login_left_img = new MetroFramework.Controls.MetroPanel();
             this.mp_login_right.SuspendLayout();
             this.mp__login_right_img.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.mbtn_login.TabIndex = 0;
             this.mbtn_login.Text = "로그인";
             this.mbtn_login.UseSelectable = true;
+            this.mbtn_login.Click += new System.EventHandler(this.Mbtn_login_Click);
             // 
             // tb_login_id
             // 
@@ -62,8 +63,10 @@
             // 
             this.tb_login_pw.Location = new System.Drawing.Point(37, 236);
             this.tb_login_pw.Name = "tb_login_pw";
+            this.tb_login_pw.PasswordChar = '*';
             this.tb_login_pw.Size = new System.Drawing.Size(217, 25);
             this.tb_login_pw.TabIndex = 2;
+            this.tb_login_pw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tb_login_pw_KeyUp);
             // 
             // lb_login_id
             // 
@@ -127,6 +130,16 @@
             this.mp__login_right_img.VerticalScrollbarHighlightOnWheel = false;
             this.mp__login_right_img.VerticalScrollbarSize = 10;
             // 
+            // mbtn_login_set_db
+            // 
+            this.mbtn_login_set_db.Location = new System.Drawing.Point(110, 77);
+            this.mbtn_login_set_db.Name = "mbtn_login_set_db";
+            this.mbtn_login_set_db.Size = new System.Drawing.Size(144, 39);
+            this.mbtn_login_set_db.TabIndex = 2;
+            this.mbtn_login_set_db.Text = "DB Setting";
+            this.mbtn_login_set_db.UseSelectable = true;
+            this.mbtn_login_set_db.Click += new System.EventHandler(this.Mbtn_login_set_db_Click);
+            // 
             // mp_login_left_img
             // 
             this.mp_login_left_img.HorizontalScrollbarBarColor = true;
@@ -140,24 +153,14 @@
             this.mp_login_left_img.VerticalScrollbarHighlightOnWheel = false;
             this.mp_login_left_img.VerticalScrollbarSize = 10;
             // 
-            // mbtn_login_set_db
-            // 
-            this.mbtn_login_set_db.Location = new System.Drawing.Point(157, 75);
-            this.mbtn_login_set_db.Name = "mbtn_login_set_db";
-            this.mbtn_login_set_db.Size = new System.Drawing.Size(97, 33);
-            this.mbtn_login_set_db.TabIndex = 2;
-            this.mbtn_login_set_db.Text = "DB Setting";
-            this.mbtn_login_set_db.UseSelectable = true;
-            this.mbtn_login_set_db.Click += new System.EventHandler(this.Mbtn_login_set_db_Click);
-            // 
-            // mf_login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 520);
             this.Controls.Add(this.mp_login_left_img);
             this.Controls.Add(this.mp_login_right);
-            this.Name = "mf_login";
+            this.Name = "Login";
             this.Text = "상봉 재정관리 프로그램";
             this.mp_login_right.ResumeLayout(false);
             this.mp_login_right.PerformLayout();
