@@ -1,25 +1,25 @@
-﻿using sangbong_financial_management.SFM.Common.Database.EFModel;
+﻿using sangbong_financial_management.SFM.Common.Database;
 using sangbong_financial_management.SFM.Common.Database.Entity;
 using System;
-using System.Data;
 
 namespace sangbong_financial_management.SFM.Common.Database.DAL
 {
     public class SFMUserInfoDal
     {
         SFM_USER_INFO sfmUserInfo = new SFM_USER_INFO();
-        SFMDatabaseModel sfmDatabaseModel = new SFMDatabaseModel();
+        SFMDatabaseSetting sfmDatabaseSetting = new SFMDatabaseSetting();
 
-        public int GetUserInfo(string userId, string userPw)
+        public int UserExistCheck(string userId, string userPw)
         {
-            var selectQuery = $@"SELECT COUNT(1) AS COUNT FROM SFM_USER_INFO (NOLOCK)
+            var selectQuery = $@"SELECT COUNT(1) AS RESULT_COUNT 
+                                    FROM SFM_USER_INFO (NOLOCK)
                                     WHERE 1=1
                                     AND USER_ID = '{userId}'
-                                    AND USER_PW = '{userPw}'";
+                                    AND 1 = Pwdcompare('{userPw}', USER_PW)";
 
-            var resultRows = sfmDatabaseModel.ReadQuery(selectQuery);
+            var resultRows = sfmDatabaseSetting.ReadQuery(selectQuery);
 
-            return Int32.Parse(resultRows.Rows[0]["COUNT"].ToString());
+            return Int32.Parse(resultRows.Rows[0]["RESULT_COUNT"].ToString());
         }
 
         public void InsertUserInfo()

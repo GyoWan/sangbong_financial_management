@@ -1,7 +1,7 @@
 ﻿using System;
 using MetroFramework.Forms;
 using sangbong_financial_management.Properties;
-using sangbong_financial_management.SFM.Common.Database.EFModel;
+using sangbong_financial_management.SFM.Common.Database;
 using sangbong_financial_management.SFM.Common.GlobalFunction;
 
 namespace sangbong_financial_management.SFM.Main
@@ -9,7 +9,7 @@ namespace sangbong_financial_management.SFM.Main
 
     public partial class DatabaseSetting : MetroForm
     {
-        SFMDatabaseModel sfmDatabaseModel = new SFMDatabaseModel();
+        SFMDatabaseSetting sfmDatabaseSetting = new SFMDatabaseSetting();
         public DatabaseSetting()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace sangbong_financial_management.SFM.Main
             string userPw = tb_db_setting_user_pw.Text;
             string databaseName = tb_db_setting_db_name.Text;
 
-            if (!sfmDatabaseModel.DatabaseConnection(server, userId, userPw, databaseName))
+            if (!sfmDatabaseSetting.DatabaseConnection(server, userId, userPw, databaseName))
             {
                 MsgBox.Error("데이터베이스 연결 오류!\n관리자에게 문의 바랍니다.\n관리자 연락처 : (010-4079-6295)");
             }

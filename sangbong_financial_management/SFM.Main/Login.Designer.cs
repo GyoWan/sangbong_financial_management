@@ -1,4 +1,6 @@
-﻿namespace sangbong_financial_management.SFM.Main
+﻿using sangbong_financial_management.SFM.Common.GlobalSetting;
+
+namespace sangbong_financial_management.SFM.Main
 {
     partial class Login
     {
@@ -161,7 +163,8 @@
             this.Controls.Add(this.mp_login_left_img);
             this.Controls.Add(this.mp_login_right);
             this.Name = "Login";
-            this.Text = "상봉 재정관리 프로그램";
+            this.Text = "SangBong 재정관리 프로그램";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.mp_login_right.ResumeLayout(false);
             this.mp_login_right.PerformLayout();
             this.mp__login_right_img.ResumeLayout(false);
